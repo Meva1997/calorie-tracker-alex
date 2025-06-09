@@ -1,54 +1,58 @@
-# React + TypeScript + Vite
+# 🥗 Calorie Tracker Alex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Calorie Tracker Alex** is a clean, responsive, and easy-to-use web app for tracking your daily calories—both consumed (food) and burned (exercise). Designed with React + TypeScript, powered by Vite and styled with TailwindCSS, this app helps you stay on top of your nutrition and fitness goals!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Quick Logging:** Add food or exercise activities in seconds.
+- **Live Calorie Summary:** Instantly see calories consumed, burned, and net total.
+- **Persistent Data:** All your activities are stored locally—close and return anytime!
+- **Intuitive Activity List:** Edit or delete any entry. Visual category highlighting.
+- **Restart With One Click:** Wipe your activities and start fresh.
+- **Modern Interface:** Built with TailwindCSS for a beautiful and mobile-friendly UI.
+- **Fully Open Source:** Fork, modify, or contribute!
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🖥️ Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **React** + **TypeScript**
+- **Vite** (super-fast dev/build)
+- **TailwindCSS** (utility-first styling)
+- **ESLint** (with React/TypeScript plugin recommendations)
+- **LocalStorage** (for data persistence)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 🛠️ Getting Started
+
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+2. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+3. **Build for Production**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📂 Project Structure
+
+```plaintext
+src/
+  components/      # UI components (Form, CalorieTracker, ActivityList)
+  context/         # React Context for global state
+  reducers/        # State management logic
+  data/            # Static data (categories)
+  hooks/           # Custom React hooks
+  types/           # TypeScript types
+public/
+index.html         # App entry point
 ```
